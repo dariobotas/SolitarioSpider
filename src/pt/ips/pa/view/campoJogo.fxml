@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="aPane" prefHeight="768.0" prefWidth="1336.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ips.pa.controller.CampoJogoController">
+   <children>
+      <Pane fx:id="backgroundPane" prefHeight="768.0" prefWidth="1336.0" />
+      <BorderPane layoutY="-1.0" prefHeight="767.0" prefWidth="1365.0">
+         <top>
+            <MenuBar focusTraversable="false" prefHeight="30.0" prefWidth="1365.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem fx:id="undoButton" mnemonicParsing="false" onAction="#undoActionButton" text="Undo" />
+                  </items>
+                </Menu>
+                  <Menu fx:id="pontuacaoView" disable="true" mnemonicParsing="false">
+                     <items>
+                        <MenuItem fx:id="undoButton1" mnemonicParsing="false" onAction="#undoActionButton" text="Undo" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Unspecified Menu" fx:id="xy">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <VBox prefHeight="612.0" prefWidth="1344.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="baralho" layoutX="57.0" layoutY="20.0" prefHeight="150.0" prefWidth="107.0" />
+                        <Pane fx:id="lixo" layoutX="160.0" layoutY="20.0" prefHeight="145.0" prefWidth="107.0" />
+                        <Pane fx:id="naipe1" layoutX="312.0" layoutY="20.0" prefHeight="145.0" prefWidth="107.0" />
+                        <Pane fx:id="naipe2" layoutX="442.0" layoutY="20.0" prefHeight="145.0" prefWidth="107.0" />
+                        <Pane fx:id="naipe3" layoutX="569.0" layoutY="20.0" prefHeight="145.0" prefWidth="107.0" />
+                        <Pane fx:id="naipe4" layoutX="694.0" layoutY="20.0" prefHeight="145.0" prefWidth="107.0" />
+                        <Pane fx:id="naipe5" layoutX="824.0" layoutY="20.0" prefHeight="145.0" prefWidth="107.0" />
+                        <Pane fx:id="naipe6" layoutX="951.0" layoutY="20.0" prefHeight="145.0" prefWidth="107.0" />
+                        <Pane fx:id="naipe7" layoutX="1079.0" layoutY="20.0" prefHeight="145.0" prefWidth="107.0" />
+                        <Pane fx:id="naipe8" layoutX="1206.0" layoutY="20.0" prefHeight="145.0" prefWidth="107.0" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="23.0" prefWidth="1365.0" />
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane fx:id="coluna1" layoutX="57.0" layoutY="15.0" prefHeight="192.0" prefWidth="101.0" />
+                        <Pane fx:id="coluna2" layoutX="184.0" layoutY="15.0" prefHeight="134.0" prefWidth="103.0" />
+                        <Pane fx:id="coluna3" layoutX="312.0" layoutY="15.0" prefHeight="134.0" prefWidth="102.0" />
+                        <Pane fx:id="coluna4" layoutX="439.0" layoutY="15.0" prefHeight="307.0" prefWidth="104.0" />
+                        <Pane fx:id="coluna5" layoutX="569.0" layoutY="15.0" prefHeight="307.0" prefWidth="102.0" />
+                        <Pane fx:id="coluna6" layoutX="694.0" layoutY="15.0" prefHeight="307.0" prefWidth="106.0" />
+                        <Pane fx:id="coluna7" layoutX="824.0" layoutY="15.0" prefHeight="307.0" prefWidth="110.0" />
+                        <Pane fx:id="coluna8" layoutX="952.0" layoutY="15.0" prefHeight="307.0" prefWidth="110.0" />
+                        <Pane fx:id="coluna9" layoutX="1080.0" layoutY="15.0" prefHeight="307.0" prefWidth="110.0" />
+                        <Pane fx:id="coluna10" layoutX="1207.0" layoutY="15.0" prefHeight="307.0" prefWidth="110.0" />
+                     </children>
+                  </Pane>
+                  <HBox prefHeight="134.0" prefWidth="1365.0">
+                     <children>
+                        <Pane prefHeight="307.0" prefWidth="192.0" />
+                        <Pane prefHeight="134.0" prefWidth="42.0" />
+                        <Pane prefHeight="134.0" prefWidth="46.0" />
+                        <Pane prefHeight="134.0" prefWidth="44.0" />
+                        <Pane prefHeight="134.0" prefWidth="38.0" />
+                        <Pane prefHeight="307.0" prefWidth="46.0" />
+                        <Pane prefHeight="134.0" prefWidth="44.0" />
+                        <Pane prefHeight="134.0" prefWidth="44.0" />
+                        <Pane prefHeight="134.0" prefWidth="44.0" />
+                        <Pane prefHeight="134.0" prefWidth="44.0" />
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="9.0" prefWidth="100.0" />
+                  <VBox prefHeight="114.0" prefWidth="510.0">
+                     <children>
+                        <HBox prefHeight="29.0" prefWidth="329.0">
+                           <children>
+                              <Pane prefHeight="29.0" prefWidth="13.0" />
+                              <Pane prefHeight="29.0" prefWidth="22.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="68.0" prefWidth="1365.0" />
+               </children>
+            </VBox>
+         </center>
+         <bottom>
+            <HBox prefHeight="78.0" prefWidth="1365.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane maxHeight="200.0" prefHeight="165.0" prefWidth="1336.0">
+                     <children>
+                        <HBox layoutY="39.0" prefHeight="159.0" prefWidth="445.0">
+                           <children>
+                              <Pane prefHeight="100.0" prefWidth="20.0" />
+                              <Pane prefHeight="100.0" prefWidth="6.0" />
+                              <Pane prefHeight="100.0" prefWidth="3.0" />
+                              <Pane prefHeight="100.0" prefWidth="6.0" />
+                              <Pane prefHeight="100.0" prefWidth="3.0" />
+                              <Pane prefHeight="100.0" prefWidth="3.0" />
+                           </children>
+                        </HBox>
+                        <Label layoutX="69.0" layoutY="6.0" text="Mover carta para coluna de Naipes" textFill="#fcf9f9" />
+                        <Label layoutX="14.0" layoutY="44.0" text="De(coluna)" textFill="#fcf9f9" />
+                        <TextField fx:id="colunaOrigem" layoutX="92.0" layoutY="44.0" prefHeight="25.0" prefWidth="29.0" />
+                        <Label layoutX="124.0" layoutY="44.0" text="          Para(naipes)" textFill="#fcf9f9" />
+                        <TextField fx:id="colunaDestino" layoutX="252.0" layoutY="44.0" prefHeight="25.0" prefWidth="29.0" />
+                        <Button fx:id="btnMover2" layoutX="284.0" layoutY="44.0" mnemonicParsing="false" onAction="#btnMoverToNaipe" prefHeight="25.0" prefWidth="77.0" text="Mover" />
+                        <Label layoutX="437.0" layoutY="4.0" text="Mover cartas entre colunas" textFill="#fcf9f9" />
+                        <Label layoutX="554.0" layoutY="17.0" text="Nº cartas a mover " textFill="#fcf9f9" />
+                        <TextField fx:id="txtCartas" layoutX="566.0" layoutY="39.0" prefHeight="25.0" prefWidth="29.0" />
+                        <Label layoutX="380.0" layoutY="17.0" text="           Origem" textFill="#fcf9f9" />
+                        <TextField fx:id="txtOrigem" layoutX="437.0" layoutY="39.0" prefHeight="25.0" prefWidth="29.0" />
+                        <Label layoutX="452.0" layoutY="17.0" text="           Destino" textFill="#fcf9f9" />
+                        <TextField fx:id="txtDestino" layoutX="512.0" layoutY="39.0" prefHeight="25.0" prefWidth="29.0" />
+                        <Button fx:id="btnMover" layoutX="601.0" layoutY="39.0" mnemonicParsing="false" onAction="#btnMoverAction" prefHeight="25.0" prefWidth="87.0" text="Mover" />
+                     </children></Pane>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

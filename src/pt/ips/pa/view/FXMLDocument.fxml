@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="718.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ips.pa.controller.FXMLDocumentController">
+    <children>
+      <ImageView fitHeight="686.0" fitWidth="840.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../imgSol_BIG.png" />
+         </image>
+      </ImageView>
+        <MenuBar fx:id="menuBar" prefHeight="32.0" prefWidth="840.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <Menu fx:id="novoJogo" mnemonicParsing="false" text="Novo Jogo">
+                           <items>
+                               <MenuItem fx:id="entrarAs" mnemonicParsing="false" onAction="#newGameAs" text="Entrar Como" />
+                           </items>
+                        </Menu>
+                        <MenuItem fx:id="close" mnemonicParsing="false" onAction="#closeGame" text="Close" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>

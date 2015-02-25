@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="718.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ips.pa.controller.FXMLnewGameController">
+    <children>
+        <ImageView fitHeight="686.0" fitWidth="840.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../imgSol_BIG.jpg" />
+            </image>
+        </ImageView>
+        <Label layoutX="254.0" layoutY="286.0" text="Nome do Jogador">
+            <font>
+                <Font name="EthnocentricRg-Regular" size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="btInfantil" layoutX="65.0" layoutY="405.0" mnemonicParsing="false" onAction="#infantilGame" prefHeight="167.0" prefWidth="164.0" text="infantil" />
+        <MenuBar layoutY="6.0" prefHeight="32.0" prefWidth="840.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TextField fx:id="textFieldPlayerName" layoutX="255.0" layoutY="316.0" prefHeight="31.0" prefWidth="332.0" />
+        <Button fx:id="saiTres" layoutX="611.0" layoutY="405.0" mnemonicParsing="false" onAction="#saiTresGame" prefHeight="167.0" prefWidth="164.0" text="sai tres" />
+    </children>
+</AnchorPane>

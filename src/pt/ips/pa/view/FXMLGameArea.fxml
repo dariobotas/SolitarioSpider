@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ank" prefHeight="862.0" prefWidth="1347.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.ips.pa.controller.FXMLGameAreaController">
+    <children>
+      <ImageView fitHeight="862.0" fitWidth="1347.0" layoutX="4.0" onMouseDragged="#onMouseDragged" onMousePressed="#onMousePressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../cardsBackground2.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="10.0" prefHeight="37.0" prefWidth="1347.0" AnchorPane.bottomAnchor="825.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="novoJogo" mnemonicParsing="false" onAction="#newGame" text="Novo Jogo" />
+                  <MenuItem fx:id="close" mnemonicParsing="false" onAction="#closeWindow" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="asPaus" layoutX="673.0" layoutY="227.0" prefHeight="49.0" prefWidth="57.0" />
+      <Label fx:id="umPaus" layoutX="134.0" layoutY="210.0" prefHeight="49.0" prefWidth="57.0" />
+      <Canvas fx:id="canvas" height="302.0" layoutX="9.0" layoutY="26.0" onMousePressed="#regCarta" width="216.0" />
+      <Pane fx:id="genericPane" layoutX="478.0" layoutY="142.0" prefHeight="699.0" prefWidth="612.0" />
+      
+      <Pane fx:id="monteCartas" layoutX="14.0" layoutY="56.0" prefHeight="138.0" prefWidth="83.0" />
+      <Pane fx:id="collum1" layoutX="22.0" layoutY="275.0" prefHeight="379.0" prefWidth="95.0" />
+      <Pane fx:id="collum2" layoutX="143.0" layoutY="275.0" prefHeight="379.0" prefWidth="95.0" />
+      <Pane fx:id="collum3" layoutX="223.0" layoutY="275.0" prefHeight="379.0" prefWidth="95.0" />
+      <Pane fx:id="collum4" layoutX="342.0" layoutY="275.0" prefHeight="379.0" prefWidth="95.0" />
+      <Pane fx:id="collum5" layoutX="463.0" layoutY="275.0" prefHeight="379.0" prefWidth="95.0" />
+      <Pane fx:id="collum6" layoutX="578.0" layoutY="275.0" prefHeight="379.0" prefWidth="95.0" />
+      <Pane fx:id="collum7" layoutX="711.0" layoutY="275.0" prefHeight="379.0" prefWidth="95.0" />
+      <Pane fx:id="gamePoints" layoutX="718.0" layoutY="626.0" prefHeight="37.0" prefWidth="95.0" />
+      <Pane fx:id="monteCopas" layoutX="718.0" layoutY="26.0" prefHeight="138.0" prefWidth="95.0" />
+      <Pane fx:id="monteOuros" layoutX="610.0" layoutY="26.0" prefHeight="138.0" prefWidth="95.0" />
+      <Pane fx:id="montePaus" layoutX="499.0" layoutY="26.0" prefHeight="138.0" prefWidth="95.0" />
+      <Pane fx:id="monteEspadas" layoutX="390.0" layoutY="26.0" prefHeight="138.0" prefWidth="95.0" />
+  
+    </children>
+    
+</AnchorPane>
